@@ -1,103 +1,90 @@
-import Image from "next/image";
+import Card from "@/app/components/Card";
+import Image from "./components/Image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="font-sans flex-col mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full ">
+      <h1 className="text-2xl font-bold text-center">
+        Welcome to My Portfolio
+      </h1>
+      <div className="mx-auto flex rounded-full overflow-hidden w-60 h-60">
+        <Image src="/kitsune.jpg" alt="Profile Picture" isZoomed width={240} />
+      </div>
+      <p className="text-lg text-center">
+        Hi, I&apos;m a web developer with a passion for creating beautiful and
+        functional websites.
+      </p>
+      <div className="md:flex mt-10 gap-x-8 space-y-8">
+        <div className="md:w-1/2">
+          <Card
+            cardTitle="Daniel Spindler"
+            cardInfo="Full Stack Developer"
+            linkText="Github"
+            link="https://github.com/danielspindler"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div>
+              <br /> My journey began in August 2020 as a trainee at Auto
+              Leebmann GmbH, where I have continuously developed and refined my
+              skills.
+            </div>
+            <br />
+            To date, I have gained experience working with TypeScript in Next.js
+            and NestJS, running on the Node.js runtime, contributing to a large
+            international webshop project for Auto-Leebmann.
+            <br /> <br /> With this Project I also gathered a wide range of
+            experience in working with databases (MySQL, MongoDB), APIs
+            (GraphQL, REST), and various tools and technologies such as Docker,
+            Git, and TailwindCSS.
+            <br />
+            <br />
+            You can see the used Skills in the Skillsection.
+          </Card>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="md:w-1/2">
+          <Card
+            cardTitle="Skills"
+            cardInfo="Skillset"
+            linkText="LinkedIn"
+            link="https://www.linkedin.com/in/daniel-spindler-99000531a/"
+          >
+            <div>
+              A list of Skills I possess:
+              <ol className="list-disc list-inside mt-1">
+                <li>HTML, CSS</li>
+                <li>JavaScript, TypeScript</li>
+                <li>NextJS, React</li>
+                <li>Node.js, NestJS</li>
+                <li>TailwindCSS</li>
+                <br />
+                <li>Docker</li>
+                <li>GraphQL, Relay</li>
+                <li>Postman</li>
+                <li>MySQL, MongoDB</li>
+                <br /> <li>Git, GitHub</li>
+                <li>Scrum, Confluence, Jira</li>
+              </ol>
+            </div>
+          </Card>
+        </div>
+      </div>
+      <div className="w-full mt-8">
+        <Card cardTitle="My Journey" cardInfo="Experience" linkText="" link="">
+          <div>
+            My Journey details
+            <ol className="list-disc list-inside my-1">
+              <li>
+                Trainee as Softwaredeveloper/Full Stack 08.2020 - 06.2023 at
+                Auto-Leebmann GmbH
+              </li>
+              <li>
+                06.2023 - 07.2025: Full Stack Developer at Auto-Leebmann GmbH
+              </li>
+            </ol>{" "}
+            Prior to that, I worked as a retailer in the mountain bike sector
+            from 2013 to 2020.
+          </div>
+        </Card>
+      </div>
     </div>
   );
 }
