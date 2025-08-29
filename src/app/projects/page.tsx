@@ -3,8 +3,10 @@ import Image from "@/app/components/Image";
 
 export default function Projects() {
   return (
-    <div className="font-sans flex-col mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full ">
-      <h1 className="text-2xl font-bold text-center">Projects</h1>
+    <div className="font-sans flex-col mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full h-full">
+      <h1 className="text-2xl font-bold text-center mt-10 mb-4 sm:mt-4">
+        Projects
+      </h1>
       <p className="text-lg text-center">
         A few projects that I&apos;m allowed to show you.
       </p>
@@ -47,7 +49,7 @@ export default function Projects() {
           </Card>
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-8 pb-12">
         <Card
           cardTitle="Leebmann24.com"
           cardInfo="Previous Job"
