@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import Drawer from "./Drawer";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
+  const pathname = usePathname();
+
   const trigger = (
     <div className="flex flex-col gap-1">
       <span className="block w-6 h-0.5 bg-gray-200"></span>
@@ -19,19 +22,31 @@ export const Header = () => {
         <div className="flex flex-col">
           <Link
             href="/"
-            className="text-lg font-medium hover:scale-110 text-center w-full p-2"
+            className={`text-lg font-medium hover:scale-110 text-center w-full p-2 ${
+              pathname === "/"
+                ? "bg-gray-500 rounded-full text-shadow-none"
+                : "text-white"
+            }`}
           >
             Home
           </Link>
           <Link
             href="projects"
-            className="text-lg font-medium hover:scale-110 text-center w-full p-2"
+            className={`text-lg font-medium hover:scale-110 text-center w-full p-2 ${
+              pathname === "/projects"
+                ? "bg-gray-500 rounded-full text-shadow-none"
+                : "text-white"
+            }`}
           >
             Projects
           </Link>
           <Link
             href="contact"
-            className="text-lg font-medium hover:scale-110 text-center w-full p-2"
+            className={`text-lg font-medium hover:scale-110 text-center w-full p-2 ${
+              pathname === "/contact"
+                ? "bg-gray-500 rounded-full text-shadow-none"
+                : "text-white"
+            }`}
           >
             Contact
           </Link>
