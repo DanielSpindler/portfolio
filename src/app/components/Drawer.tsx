@@ -30,7 +30,7 @@ export default function Drawer({
       </Button>
       <HeroDrawer
         {...props}
-        className="max-w-64 bg-gradient-to-tl from-black/100 via-red-900/60 to-gray-800/60 text-white text-shadow-md text-shadow-black rounded-none"
+        className="max-w-64 border-r border-white/20 bg-gradient-to-tr from-gray-900/30 to-gray-900/10 backdrop-blur-md text-white text-shadow-md text-shadow-black rounded-none"
         placement="left"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
