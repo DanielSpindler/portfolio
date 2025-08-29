@@ -5,8 +5,10 @@ export default async function Contact() {
   const data = await res.json();
 
   return (
-    <div className="font-sans mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full">
-      <h1 className="text-2xl font-bold text-center">Contact</h1>
+    <div className="font-sans flex-col mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full h-full">
+      <h1 className="text-2xl font-bold text-center mt-10 sm:mt-4 mb-4">
+        Contact
+      </h1>
       <p className="text-lg text-center">
         If you would like to get in touch, feel free to reach out!
       </p>
@@ -21,9 +23,9 @@ export default async function Contact() {
           GitHub
         </a>
       </p>
-      <div className="max-w-3/4 mx-auto bg-red-900/90 hidden sm:block">
+      <div className="max-w-1/2 mt-4 pb-2 mx-auto bg-red-900/90 rounded-full hidden sm:flex justify-center">
         {data.joke && (
-          <p className="text-lg text-center mt-4 break-all p-4 max-h-40 text-wrap">
+          <p className="text-lg text-center mt-4 px-2 py-2 text-wrap whitespace-break-spaces">
             Here&apos;s a programming joke for you: {data.joke}
           </p>
         )}
