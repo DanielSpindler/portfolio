@@ -3,11 +3,11 @@ import Image from "./components/Image";
 
 export default function Home() {
   return (
-    <div className="font-sans flex-col mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full ">
-      <h1 className="text-2xl font-bold text-center">
+    <div className="font-sans flex-col mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full h-full">
+      <h1 className="text-2xl font-bold text-center mt-10 mb-4 sm:mt-4">
         Welcome to My Portfolio
       </h1>
-      <div className="mx-auto flex rounded-full overflow-hidden w-60 h-60">
+      <div className="mx-auto flex rounded-full overflow-hidden w-60 h-60 shadow-white/50 shadow-lg mb-4">
         <Image src="/kitsune.jpg" alt="Profile Picture" isZoomed width={240} />
       </div>
       <p className="text-lg text-center">
@@ -67,7 +67,7 @@ export default function Home() {
           </Card>
         </div>
       </div>
-      <div className="w-full mt-8">
+      <div className="w-full mt-8 pb-12">
         <Card cardTitle="My Journey" cardInfo="Experience" linkText="" link="">
           <div>
             My Journey details
