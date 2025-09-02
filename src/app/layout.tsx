@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-[100dvh] overscroll-none bg-black/90`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-[100dvh] overflow-hidden overscroll-none bg-black/90`}
       >
         <Providers>
           <div
