@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overscroll-none bg-black/90`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-[100dvh] overscroll-none bg-black/90`}
       >
         <Providers>
           <div
@@ -62,7 +62,7 @@ export default function RootLayout({
           >
             <Header />
             <div className="backdrop-blur-xs bg-black/25 overflow-auto">
-              <main className="flex h-screen items-center sm:items-start text-white text-shadow-black text-shadow-md">
+              <main className="flex h-[100dvh] items-center sm:items-start text-white text-shadow-black text-shadow-md">
                 {children}
               </main>
             </div>
