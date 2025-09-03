@@ -53,9 +53,9 @@ export default function RootLayout({
       >
         <Providers>
           <div
+            className="bg-cover "
             style={{
               backgroundImage: "url('/KitsuneShrine.jpg')",
-              backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "top",
             }}
