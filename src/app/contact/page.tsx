@@ -1,3 +1,5 @@
+import GoogleButton from "../components/GoogleButton";
+
 export default async function Contact() {
   const res = await fetch(
     "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,racist&type=single"
@@ -34,9 +36,8 @@ export default async function Contact() {
         <div className="md:w-1/2 mx-auto mt-12">
           <form
             className="flex flex-col gap-4"
-            action="mailto:admin@daniel-spindler.de"
+            action="https://formsubmit.co/danielkillercherry@gmail.com"
             method="POST"
-            encType="text/plain"
           >
             <label htmlFor="message" className="font-medium">
               Your Message
@@ -62,12 +63,12 @@ export default async function Contact() {
               className="border rounded p-2 bg-white/60 text-large font-bold text-black text-shadow-2xs"
               placeholder="Enter the answer"
             />
-            <button
+            <GoogleButton
               type="submit"
               className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
             >
               Send Email
-            </button>
+            </GoogleButton>
           </form>
         </div>
       </div>
