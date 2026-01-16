@@ -3,7 +3,7 @@ import Image from "@/app/components/Image";
 
 export default function Projects() {
   return (
-    <div className="font-sans flex-col mx-auto justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 w-full h-full">
+    <div className="font-sans justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 h-full">
       <h1 className="text-2xl font-bold text-center mt-10 mb-4 sm:mt-4">
         Projects
       </h1>

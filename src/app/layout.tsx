@@ -51,26 +51,22 @@ export default function RootLayout({
     <html lang="en">
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-[100dvh] overflow-hidden overscroll-none bg-black/90`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-[100dvh] bg-cover overflow-hidden overscroll-none bg-black/90`}
+        style={{
+          backgroundImage: "url('/KitsuneShrine.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top",
+        }}
       >
         <Providers>
-          <div
-            className="bg-cover "
-            style={{
-              backgroundImage: "url('/KitsuneShrine.jpg')",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "top",
-            }}
-          >
-            <Header />
-            <div className="backdrop-blur-xs bg-black/25 overflow-auto">
-              <main className="flex h-[100dvh] items-center sm:items-start text-white text-shadow-black text-shadow-md">
-                {children}
-              </main>
-            </div>
+          <Header />
+          <div className="backdrop-blur-xs bg-black/25 overflow-auto max-w-screen-2xl mx-auto no-scrollbar shadow-black shadow-2xl">
+            <main className="flex h-[100dvh] text-white text-shadow-black text-shadow-md">
+              {children}
+            </main>
           </div>
         </Providers>
       </body>
-    </html>
+    </html >
   );
 }
