@@ -7,7 +7,7 @@ export default function GoogleButton(props: ButtonProps) {
     //for now just for the contact form
     <Button
       {...props}
-      alt="google sign in button"
+      alt="google Event Button"
       onPress={() =>
         sendGTMEvent({
           event: "contact_form_submitted",
